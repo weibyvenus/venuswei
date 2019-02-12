@@ -1,130 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Weather Card</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="WeatherBox"/>
-  
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cairo:300,400,600,700|Noto+Sans+TC:300,400,500,700'>
-
-      <link rel="stylesheet" href="css/style.css">
-
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daily UI</title>
+    <!-- Bootstrap CSS -->
+    <link href="stylesheets/style.css" rel="stylesheet">
 </head>
-
 <body>
-
-  
-<div class="daybox">
-  <label>
-    <input id="switch_night" type="checkbox"/>
-    <div class="top">
-      <svg class="temsvg">
-        <circle cx="0" cy="100" r="3"></circle>
-        <text x="0" y="100">18°C</text>
-        <circle cx="70" cy="90" r="3"></circle>
-        <text x="70" y="90">19°C</text>
-        <circle cx="140" cy="110" r="3"></circle>
-        <text x="140" y="110">17°C</text>
-        <circle cx="210" cy="85" r="3"></circle>
-        <text x="210" y="85">20°C</text>
-        <circle cx="280" cy="30" r="3"></circle>
-        <text x="280" y="30">25°C</text>
-        <circle cx="350" cy="50" r="3"></circle>
-        <text x="350" y="50">23°C</text>
-        <circle cx="420" cy="50" r="3"></circle>
-        <polyline points="0,100 70,90 140,110 210,85 280,30 350,50 420,50"></polyline>
-      </svg>
-      <div class="text_area">
-        <div class="temperature">19 °C</div>
-        <div class="infos">
-          <div class="address">彰化縣彰化市西勢里</div>
-          <div class="time">星期二 下午7:44</div>
+    <div class="container">
+        <div class="user">
+            <div class="userpic">
+            <div class="desktop-pic"><img src="images/desktop.jpg"></div>
+            <div class="mobile-pic"><img src="images/mobile.jpg"></div>
+            </div>
+            <div class='links'></div>
         </div>
-      </div>
-      <div class="moon"></div>
-      <div class="cloud">
-        <div class="rain"></div>
-        <div class="rain rain2"></div>
-        <div class="rain rain3"></div>
-      </div>
+
+        <div class="works">
+
+        </div>
     </div>
-    <div class="bottom">
-      <div class="dayweather">
-        <h3>MON</h3>
-        <svg viewbox="-65 -35 100 100">
-          <circle class="cloud" cx="0" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
-          <circle class="cloud" cx="-7" cy="15" r="15"></circle>
-        </svg>
-      </div>
-      <div class="dayweather">
-        <h3>TUE</h3>
-        <svg viewbox="-65 -25 100 100">
-          <line class="rain" x1="-25" y1="15" x2="-25" y2="25"></line>
-          <line class="rain" x1="-14" y1="25" x2="-14" y2="35"></line>
-          <line class="rain" x1="-5" y1="0" x2="-5" y2="15"></line>
-          <circle class="cloud" cx="0" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
-          <circle class="cloud" cx="-7" cy="15" r="15">  </circle>
-        </svg>
-      </div>
-      <div class="dayweather">
-        <h3>WED</h3>
-        <svg viewbox="-65 -35 100 100">
-          <circle class="cloud" cx="0" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
-          <circle class="cloud" cx="-7" cy="15" r="15"></circle>
-        </svg>
-      </div>
-      <div class="dayweather">
-        <h3>THU</h3>
-        <svg viewbox="-50 -50 100 100">
-          <circle class="sun" cx="0" cy="0" r="22"></circle>
-          <circle class="cloud" cx="0" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
-          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
-          <circle class="cloud" cx="-7" cy="15" r="15"></circle>
-        </svg>
-      </div>
-      <div class="dayweather">
-        <h3>FRI</h3>
-        <svg viewbox="-50 -50 100 100">
-          <circle class="sun" cx="0" cy="0" r="22"></circle>
-        </svg>
-      </div>
-      <div class="dayweather">
-        <h3>SAT</h3>
-        <svg viewbox="-50 -50 100 100">
-          <circle class="sun" cx="0" cy="0" r="22"></circle>
-        </svg>
-      </div>
-      <div class="dayweather">
-        <h3>SUN</h3>
-        <svg viewbox="-50 -50 100 100">
-          <circle class="sun" cx="0" cy="0" r="22"></circle>
-        </svg>
-      </div>
-    </div>
-  </label>
-</div>
-  
-  
 
-    <script  src="js/index.js"></script>
+    <script type="text/template" id="work-tpl">
+        <div class="work">
+            <div class="pic">
+                <img class="lazy" src="images/mobile.jpg" data-src="images/day${num}.jpg">
+            </div>
+            <!-- <div class="day"><p>${num}</p></div> -->
+            <div class="loader">
+                <div class="loader-inner cube-transition">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.lazy/1.6.5/jquery.lazy.min.js"></script>
+    <script src="js/main.js"></script>
 
-
-
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </body>
 
 </html>
